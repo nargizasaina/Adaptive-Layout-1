@@ -1,0 +1,60 @@
+.clmns-block {
+    &--quatro {
+        text-align: center;
+        margin-top: -6.9%;
+    }
+
+    &__column {
+        padding: 58px 7% 35px;
+
+        &--red {
+            background: $red;
+        }
+
+        &--yellow {
+            background: $yellow;
+        }
+
+        &--green {
+            background: $green;
+        }
+
+        &--violet {
+            background: $violet;
+        }
+    }
+
+    &__link {
+        @include link;
+    }
+
+    &__col-title {
+        &::before {
+            @include ic-before;
+        }
+
+        &--message::before {
+            background-position: 13px -63px;
+        }
+
+        &--pencil::before {
+            background-position: -64px -59px;
+        }
+
+        &--crown::before {
+            background-position: -139px 13px;
+        }
+
+        &--user::before {
+            background-position: 12px 15px;
+        }
+    }
+
+    &__text {
+        margin-top: 3px;
+
+        @include md {
+            font-size: 16px;
+        }
+    }
+}

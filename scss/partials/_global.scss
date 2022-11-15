@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $main-font;
+    color: $main-color;
+    background: $background-main;
+    font-size: 13px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    @include make-clmns;
+}
+
+.col-md {
+    @include md {
+        @include make-clmns;
+    }
+}
+
+.col-lg {
+    @include lg {
+        @include make-clmns;
+    }
+}

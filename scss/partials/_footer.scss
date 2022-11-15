@@ -1,0 +1,76 @@
+.footer {
+    background-color: $background-add;
+    text-align: center;
+
+    &__top {
+        font-size: 15px;
+        padding: 40px 0 25px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 377px;
+        margin: 0 auto;
+    }
+
+    &__sm-link {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin: 0 45px 20px;
+
+        @include md {
+            margin: 0;
+        }
+
+        &--fb {
+            background: #fff url(../images/ic-fb.png) 14px 11px no-repeat;
+        }
+
+        &--tw {
+            background: #fff url(../images/ic-tw.png) 11px no-repeat;
+        }
+    }
+
+    &__span {
+        padding: 0 6px;
+
+        @include md {
+            font-size: 15px;
+        }
+
+        &--1 {
+            @include md {
+                order: -1;
+            }
+        }
+    }
+
+    &__line {
+        width: 284px;
+        height: 1px;
+        background-color: #387d89;
+        border: none;
+    }
+
+    &__bottom {
+        padding: 26px 0 36px;
+
+        @include md {
+            font-size: 16px;
+        }
+    }
+
+    &__ext-link {
+        text-decoration: none;
+        &--design {
+            color: $yellow;
+        }
+    
+        &--images {
+            color: #fff;
+        }
+    }
+
+}

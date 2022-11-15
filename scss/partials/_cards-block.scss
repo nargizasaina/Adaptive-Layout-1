@@ -1,0 +1,31 @@
+.cards-block {
+    text-align: center;
+    padding-top: 6.3%;
+
+    &__col-title {
+        margin-bottom: 10px;
+    }
+
+    &__row {
+        margin: 5.4% 0 0;
+        justify-content: space-between;
+
+        @include md {
+            margin: 5.4% -15px 0;
+        }
+    }
+    &__col{
+        margin: 0 auto 30px;
+        @include md{
+            padding: 0 15px;
+        }
+    }
+
+    &__card {
+        padding: 25px;
+
+        @include md {
+            padding: 45px 25px 61px;
+        }
+    }
+}

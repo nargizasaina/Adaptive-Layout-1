@@ -1,0 +1,53 @@
+.form-block {
+    padding: 42px 0 7.5%;
+    text-align: center;
+    &__col-title{
+        margin-bottom: 10px;
+        &::before {
+            @include ic-before;
+            background-position: 13px 15px;
+        }
+    }
+    &__col-subtitle{
+        margin-bottom: 32px;
+    }
+
+    &__field {
+        background-color: $background-add;
+        border: 1px solid #387d89;
+        color: #76b2be;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 16px;
+        margin: 0 15px 14px;
+        width: 270px;
+        height: 46px;
+
+        &::placeholder {
+            @include placeholder;
+            color: #76b2be;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+    &__message {
+        resize: none;
+        height: 126px;
+        margin: 15px auto 26px;
+        padding-top: 15px;
+
+        @media screen and (min-width: 620px) {
+            width: 570px;
+        }
+    }
+    &__link-btn{
+        background-color: $background-add;
+        padding: 11px 27px 10px;
+        position: relative;
+        cursor: pointer;
+        border: none;
+        &::after{
+            border-color: $background-add transparent transparent transparent;
+        }
+    }   
+}

@@ -1,0 +1,147 @@
+%btn-lines {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.header {
+    background: $background-add url(../images/header-back.jpg) 57% 0 no-repeat;
+    font-family: $add-font;
+
+    &__inner {
+        background: rgba(42, 108, 120, 0.5);
+        padding: 26px 30px 10px;
+        position: relative;
+        border: 1px solid #2a6c78;
+        border-top: none;
+
+        @include md {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__btn {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+        position: relative;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        cursor: pointer;
+
+        @include md {
+            display: none;
+        }
+    }
+
+    &__btn-lines {
+        top: 0;
+        @extend %btn-lines;
+
+        &::before {
+            content: "";
+            top: 7px;
+            @extend %btn-lines;
+        }
+
+        &::after {
+            content: "";
+            top: 14px;
+            @extend %btn-lines;
+        }
+    }
+
+    &__nav-hidden {
+        height: 0;
+
+        @include md {
+            height: 100%;
+        }
+    }
+
+    &__nav {
+        text-align: left;
+        max-width: 100px;
+        height: 186px;
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        overflow: hidden;
+        transition: height 2s;
+
+        @include md {
+            text-align: right;
+            position: static;
+            max-width: 332px;
+            height: 100%;
+        }
+
+        &-list {
+            list-style: none;
+            margin: 10px 0;
+            padding: 20px 25px 20px 5px;
+            background-color: $background-main;
+
+            @include md {
+                margin: 0;
+                padding: 0;
+                background-color: transparent;
+            }
+        }
+
+        &-item {
+            margin: 4px 4px 16px 30px;
+
+            @include md {
+                display: inline-block;
+            }
+        }
+
+        &-link {
+            @include link;
+            font-size: 15px;
+
+            @include md {
+                font-size: 17px;
+            }
+        }
+    }
+
+    &__text {
+        padding: 9% 0 20.8%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: normal;
+        font-size: 22px;
+        text-transform: uppercase;
+
+        @include md {
+            font-size: 30px;
+            letter-spacing: 5px;
+        }
+
+        @include lg {
+            font-size: 41px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 20px;
+
+        @include md {
+            font-size: 25px;
+        }
+
+        @include lg {
+            font-size: 31px;
+        }
+    }
+}

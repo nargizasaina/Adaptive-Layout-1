@@ -1,0 +1,31 @@
+.card {
+    background: $background-add;
+    max-width: 370px;
+
+    &--red {
+        border-top: 7px solid $red;
+    }
+
+    &--yellow {
+        border-top: 7px solid $yellow;
+    }
+
+    &--green {
+        border-top: 7px solid $green;
+    }
+
+    &__img {
+        margin: 0 auto 10px;
+        border-radius: 50%;
+    }
+
+    &__text {
+        color: #76b2be;
+        margin-bottom: 31px;
+
+        @include md {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}

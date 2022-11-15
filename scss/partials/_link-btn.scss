@@ -1,0 +1,45 @@
+.link-btn {
+    @include link;
+    text-transform: uppercase;
+    font-size: 15px;
+    display: inline-block;
+    padding: 9px 20px;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 11px 0 11px;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%);
+        display: block;
+    }
+
+    &--red {
+        background-color: $red;
+
+        &::after {
+            border-color: $red transparent transparent transparent;
+        }
+    }
+
+    &--yellow {
+        background-color: $yellow;
+
+        &::after {
+            border-color: $yellow transparent transparent transparent;
+        }
+    }
+
+    &--green {
+        background-color: $green;
+
+        &::after {
+            border-color: $green transparent transparent transparent;
+        }
+    }
+}
